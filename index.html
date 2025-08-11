@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Open Graph (WhatsApp/Twitter/Facebook vb. preview için) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="İrfaniye Erkek Öğrenci Yurdu">
+  <meta property="og:description" content="Reşadiye, Sokullu Sk. No:56, 55050 İlkadım/Samsun">
+  <meta property="og:image" content="https://example.com/yurt-resmi.jpg">
+  <meta property="og:image:alt" content="Örnek Yurt Dış Görünüşü">
+  <meta property="og:url" content="https://example.com/redirect.html">
+
+ 
+
+  <title>Yurt Konumuna Yönlendiriliyor…</title>
+
+  <!-- İsteğe bağlı: kısa bir stil -->
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;display:flex;
+      align-items:center;justify-content:center;height:100vh;margin:0;background:#f6f7fb;color:#222}
+    .box{max-width:540px;text-align:center}
+    img{max-width:200px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="https://example.com/yurt-resmi.jpg" alt="Yurt resmi">
+    <h1>Yurt Konumuna Yönlendiriliyorsun…</h1>
+    <p>Tıklanmıyorsa birkaç saniye bekle veya <a id="mapsLink" href="#" target="_blank" rel="noopener">buraya tıkla</a>.</p>
+  </div>
+
+  <!--
+    BURAYA kendi Google Maps paylaşım linkini yapıştır:
+    örn: "https://maps.app.goo.gl/abcd1234XYZ" veya "https://www.google.com/maps/place/..."
+  -->
+  <script>
+    const mapsUrl = "https://maps.app.goo.gl/EXAMPLE_GOOGLE_MAPS_LINK";
+    document.getElementById('mapsLink').href = mapsUrl;
+
+    // Otomatik yönlendirme (2 saniye bekleme, istersen 0 yap)
+    setTimeout(()=> { window.location.href = mapsUrl; }, 500);
+  </script>
+</body>
+</html>
